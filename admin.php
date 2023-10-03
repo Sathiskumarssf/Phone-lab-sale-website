@@ -15,12 +15,12 @@
   $sql2 ="INSERT INTO images (image_url,name,price) VALUES ('$image_url','$image_name','$image_price')";
 
   if(isset($_POST["move_image"]) && isset($_FILES["protect_path"])){
-    echo $_FILES["protect_path"]['name'];
+   
     $image_name =$_POST["protect_name"];
     $image_url=$_FILES["protect_path"]['name'];
-   
+    $imgae_category=$_POST["categories"];
     $image_price=$_POST["protect_price"];
-    $sql2 ="INSERT INTO images (image_url,name,price) VALUES ('$image_url','$image_name','$image_price')";
+    $sql2 ="INSERT INTO images (image_url,name,price,category) VALUES ('$image_url','$image_name','$image_price','$imgae_category')";
     mysqli_query($conn,$sql2);
   
 }
@@ -270,7 +270,7 @@ li{
   #add_items_inform{
       position: absolute;
       right: 40%;
-      top: 30%;
+      top: 20%;
       height: 0%;
       display: none;
       background-color: lightslategrey;
@@ -523,6 +523,9 @@ li{
             <input name="protect_path" type="file" ><br>
             <label for="price">Enter the price</label>
             <input type="number" name="protect_price" id=""><br>
+            <label for="categories" >The category: </label>
+            <input type="text" name="categories" id="category"><br>
+            
             <button id="move_image" name="move_image">Submit</button>
         </div>
        </form>
@@ -533,7 +536,7 @@ li{
       <h1 id="phone_page"> Phone items</h1>
       <section id="phone_items">
     <?php 
-          $sql = "SELECT * FROM images ";
+          $sql = "SELECT * FROM images where category= 'phone'";
           $res = mysqli_query($conn,  $sql);
 
           if (mysqli_num_rows($res) > 0) {
@@ -562,7 +565,7 @@ li{
       <h1 id="labpage_page"> Leb items</h1>
       <section id="lab_iterms">
     <?php 
-          $sql = "SELECT * FROM images ";
+          $sql = "SELECT * FROM images where category= 'laptop'";
           $res = mysqli_query($conn,  $sql);
 
           if (mysqli_num_rows($res) > 0) {
@@ -634,7 +637,7 @@ li{
 
       document.getElementById("add_iterms").onclick=function appear1(){
           document.getElementById("add_items_inform").style.display='block';
-        document.getElementById("add_items_inform").style.height='40%';
+        document.getElementById("add_items_inform").style.height='60%';
         
       }
 
@@ -643,7 +646,11 @@ li{
         document.getElementById("add_items_inform").style.height='0%';
         event.preventDefault();
       }
-      
+
+      let y=document.getElementById("category");
+      y.addEventListener('mouseover',function add(){
+        document.getElementById("category").ariaPlaceholder="phone/lab";
+      })
      </script>
 
 </body>

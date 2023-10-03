@@ -360,7 +360,7 @@ li{
       <h1 id="phone_page"> phone items</h1>
       <section id="phone_items">
     <?php 
-          $sql = "SELECT * FROM images ";
+          $sql = "SELECT * FROM images where category= 'phone'";
           $res = mysqli_query($conn,  $sql);
 
           if (mysqli_num_rows($res) > 0) {
@@ -389,7 +389,7 @@ li{
       <h1 id="labpage_page"> leb items</h1>
       <section id="lab_iterms">
     <?php 
-          $sql = "SELECT * FROM images ";
+          $sql = "SELECT * FROM images where category= 'laptop'";
           $res = mysqli_query($conn,  $sql);
 
           if (mysqli_num_rows($res) > 0) {
