@@ -233,8 +233,12 @@ li{
     font-size: 40px;
     width: 30%;
     border-radius: 20px;
+    cursor: pointer;
   }
-        
+
+  #buy:hover{
+    background-color: lightskyblue;
+  }   
 
   @media(max-width:568px ){
     .image{
@@ -263,7 +267,7 @@ li{
     }
     .sale_items{
       position: absolute;
-      font-size: 20px;
+      font-size: 25px;
       top: 60%;
     }
 
@@ -271,12 +275,20 @@ li{
       width: 80%;
     }
 
-   #lab_link ,#phone_link{
+   #lab_link {
    position: absolute;
     top: 90%;
    }
+   #phone_link {
+   position: absolute;
+    top: 90%;
+    left: 25%;
+   }
+
+
    .photo1{
-      height: 50%;
+      height: 40%;
+      width: 50%;
     }
 
     #buy{
@@ -290,8 +302,16 @@ li{
     }
 
     .search,.profile{
-      width: 50px;
+      width: 70px;
       
+    }
+
+    #buy{
+      width: 100px;
+    }
+
+    #add_iterms{
+      top: 90%;
     }
     .search{
       right: 20%;
@@ -302,12 +322,17 @@ li{
     }
     .sale_items{
       position: absolute;
-      font-size: 25px;
-      top: 80%;
+      font-size: 35px;
+      top: 65%;
     }
-    #lab_link ,#phone_link{
+    #lab_link {
    position: absolute;
     top: 90%;
+   }
+    #phone_link {
+   position: absolute;
+    top: 90%;
+    left: 15%;
    }
 
    .alb{
@@ -315,18 +340,62 @@ li{
     }
 
     .photo1{
-      height: 60%;
+      height: 45%;
+      width: 60%;
+      top: 27%;
     }
   }
 
   @media(min-width:769px){
-    .alb{
-        width: 27%;
+    .image{
+      width: 20%;
+    }
+
+    .search,.profile{
+      width: 70px;
+      
     }
 
     #buy{
-      width: 150px;
+      width: 100px;
     }
+
+    #add_iterms{
+      top: 90%;
+    }
+    .search{
+      right: 20%;
+    }
+
+    .wel{
+      font-size: 30px;
+    }
+    .sale_items{
+      position: absolute;
+      font-size: 35px;
+      
+    }
+    #lab_link {
+   position: absolute;
+    top: 90%;
+   }
+    #phone_link {
+   position: absolute;
+    top: 90%;
+    left: 15%;
+   }
+
+   .alb{
+        width: 27%;
+    }
+
+    .photo1{
+      height: 50%;
+      width: 30%;
+      top: 27%;
+    }
+    
+   
   }
 
   </style>

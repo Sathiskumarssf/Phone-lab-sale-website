@@ -275,24 +275,35 @@ li{
         top: 84%;
         margin-left: 40%;
         height: 40px;
+        cursor: pointer;
     }
     #add_admin{
         position: absolute;
         top: 84%;
         margin-left: 30%;
         height: 40px;
+        cursor: pointer;
     }
-
+  
+    #add_admin:hover{
+      background-color: aquamarine;
+    }
+    
   #buy{
     background-color: #0074d9;
     font-size: 40px;
     width: 30%;
     border-radius: 20px;
+    cursor: pointer;
+  }
+
+  #buy:hover{
+    background-color: lightsteelblue;
   }
 
   #add_items_inform{
       position: absolute;
-      right: 40%;
+      right: 10%;
       top: 20%;
       height: 0%;
       display: none;
@@ -406,44 +417,37 @@ li{
       top: 60%;
     }
 
+    .alb{
+      width: 80%;
+    }
+
    #lab_link {
    position: absolute;
     top: 90%;
-    left: 35%;
-    margin: 4% 4%;
    }
    #phone_link {
    position: absolute;
     top: 90%;
-    left: 0%;
-    margin: 4% 4%;
-
+    left: 25%;
    }
 
+
+   .photo1{
+      height: 40%;
+      width: 50%;
+    }
+
     #buy{
-        width: 100px;
-        
-    }
-
-    .alb{
-        width: 80%;
-    }
-
-    .photo1{
-      height: 50%;
+      width: 100px;
     }
 
 
     #add_iterms{
     position: absolute;
-    top: 85%;
+    top: 90%;
     left: 25%;
    }
-    #add_admin{
-    position: absolute;
-    top: 90%;
-    left: 35%;
-   }
+
    
    #add_items_inform{
     width: 80%;
@@ -452,6 +456,23 @@ li{
     left: 10%;
    }
 
+   #add_items_inform label,#chose{
+   
+    font-size: 90%;
+   }
+   #add_items_inform input{
+   
+    font-size: 90%;
+    width: 40%;
+   }
+    #add_admin{
+    position: absolute;
+    top: 85%;
+    left: 35%;
+   }
+   
+   
+
    #add_admin_details{
     width: 70%;
     height: 40%;
@@ -459,25 +480,14 @@ li{
     left: 10%;
    }
 
-   #add_items_inform label{
    
-    font-size: 90%;
-   }
    #add_admin_details  label{
     font-size: 90%;
    }
    
 
 
-   #chose{
-    
-         font-size: 90%;
-  }
-   #add_items_inform input{
    
-    font-size: 90%;
-    width: 40%;
-   }
    #add_admin_details input{
    
     font-size: 90%;
@@ -485,49 +495,63 @@ li{
    }
 
   }
-  @media(max-width:767px) and (min-width:569px ){
+  @media(max-width:768px) and (min-width:569px ){
     .image{
       width: 20%;
     }
 
     .search,.profile{
-      width: 50px;
+      width: 60px;
       
+    }
+
+    #buy{
+      width: 100px;
+    }
+
+    #add_iterms{
+      top: 90%;
     }
     .search{
       right: 20%;
     }
-    .alb{
-        width: 40%;
-    }
+
     .wel{
       font-size: 30px;
     }
     .sale_items{
       position: absolute;
-      font-size: 25px;
-      top: 60%;
+      font-size: 35px;
+      top: 65%;
     }
-    #lab_link ,#phone_link{
+    #lab_link {
    position: absolute;
     top: 90%;
    }
+    #phone_link {
+   position: absolute;
+    top: 90%;
+    left: 15%;
+   }
 
-   #add_iterms{
-    position: absolute;
-    top: 80%;
-   }
-   #add_admin{
-    position: absolute;
-    top: 80%;
-   }
    .alb{
       width: 40%;
     }
 
     .photo1{
-      height: 60%;
+      height: 45%;
+      width: 60%;
+      top: 27%;
     }
+   #add_iterms{
+    position: absolute;
+    top: 90%;
+
+   }
+  
+
+   
+
     #add_items_inform{
     width: 80%;
     height: 40%;
@@ -535,10 +559,126 @@ li{
     left: 10%;
    }
 
-   #add_items_inform label{
+   #add_items_inform label,#chose{
    
     font-size: 90%;
    }
+   #add_items_inform input{
+   
+    font-size: 90%;
+    width: 40%;
+   }
+   #add_iterms{
+    top: 90%;
+   }
+   #add_admin{
+    position: absolute;
+    top: 90%;
+    left: 35%;
+   }
+   
+
+   
+   #add_admin_details label{
+    font-size: 90%;
+   }
+  
+   
+
+
+
+#add_admin_details input{
+
+ font-size: 90%;
+ width: 40%;
+}}
+
+  @media(min-width:769px){
+    .image{
+      width: 20%;
+    }
+
+    .search,.profile{
+      width: 70px;
+      
+    }
+
+    #buy{
+      width: 100px;
+    }
+
+    #add_iterms{
+      top: 90%;
+    }
+    .search{
+      right: 20%;
+    }
+
+    .wel{
+      font-size: 30px;
+    }
+    .sale_items{
+      position: absolute;
+      font-size: 35px;
+      
+    }
+    #lab_link {
+   position: absolute;
+    top: 90%;
+   }
+    #phone_link {
+   position: absolute;
+    top: 90%;
+    left: 15%;
+   }
+
+   .alb{
+      width: 27%;
+    }
+
+    .photo1{
+      
+      
+      height: 50%;
+      width: 30%;
+      top: 27%;
+    }
+   #add_iterms{
+    position: absolute;
+    top: 90%;
+
+   }
+  
+
+   
+
+   #add_items_inform{
+    width: 40%;
+    height: 70%;
+    position: absolute;
+    left: 10%;
+   }
+
+   #add_items_inform label,#chose{
+   
+    font-size: 150%;
+   }
+   #add_items_inform input{
+   
+    height: 30px;
+    width: 40%;
+   }
+   #add_iterms{
+    top: 90%;
+   }
+   #add_admin{
+    position: absolute;
+    top: 90%;
+    left: 35%;
+   }
+   
+
+   
    #add_admin_details label{
     font-size: 90%;
    }
@@ -547,74 +687,14 @@ li{
     font-size: 90%;
   }
 
-}
-#add_items_inform input{
 
- font-size: 90%;
- width: 40%;
-}
+
 #add_admin_details input{
 
  font-size: 90%;
  width: 40%;
 }
-
-  @media(min-width:769px){
-    .alb{
-        width: 23%;
-    }
-
-    #buy{
-      width: 150px;
-    }
-
-    #phone_link,#lab_link{
-        
-        top: 80%;
-    }
-
-    #sale_items{
-        top: 60%;
-    }
-
-    #add_items_inform{
-    width: 40%;
- 
-    position: absolute;
-    left: 10%;
-   }
-   #add_admin_details{
-    width: 40%;
-  
-    position: absolute;
-    left: 10%;
-   }
-
-   #add_items_inform label{
    
-    font-size: 150%;
-   }
-   #add_admin_details label{
-   
-    font-size: 150%;
-   }
-   #chose{
-  
-         font-size: 150%;
-  }
-   #add_items_inform input{
-   
-   
-    width: 40%;
-   }
-   #add_admin_details input{
-   
-   
-    width: 40%;
-   }
-   .photo1{
-    top: 25%;
-   }
   }
   </style>
 </head>
@@ -782,7 +862,7 @@ li{
       }
       document.getElementById("add_admin").onclick=function appear1(){
           document.getElementById("add_admin_details").style.display='block';
-        document.getElementById("add_admin_details").style.height='50%';
+        document.getElementById("add_admin_details").style.height='30%';
         
       }
 
@@ -798,9 +878,10 @@ li{
       }
       
       let y=document.getElementById("category");
-      y.addEventListener('mouseover',function add(){
-        document.getElementById("category").ariaPlaceholder="phone/lab";
-      })
+      y.addEventListener('mouseenter',backshow);
+      function backshow(){
+        document.getElementById("category").placeholder='phone/laptop';
+      }
      </script>
 
 </body>
