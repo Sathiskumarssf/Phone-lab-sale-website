@@ -160,7 +160,7 @@ if ($super_admin_result->num_rows > 0) {
         }
 
         document.getElementById("creat").onclick= function show1(){
-            document.getElementById("creat-aco").style.height='50%';
+            document.getElementById("creat-aco").style.height='60%';
             document.getElementById("creat-aco").style.display='block';
             document.getElementById("content").style.display='none';
             event.preventDefault();
