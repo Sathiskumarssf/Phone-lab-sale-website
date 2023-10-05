@@ -21,8 +21,10 @@
     $imgae_category=$_POST["categories"];
     $image_price=$_POST["protect_price"];
     $sql2 ="INSERT INTO images (image_url,name,price,category) VALUES ('$image_url','$image_name','$image_price','$imgae_category')";
+
+    if(!empty($image_name)&& !empty( $image_url)&&  !empty($imgae_category) &&!empty($image_price)){
     mysqli_query($conn,$sql2);
-  
+  }
 }
   ?>
 
