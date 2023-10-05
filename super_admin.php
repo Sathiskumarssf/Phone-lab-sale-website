@@ -21,7 +21,10 @@
     $imgae_category=$_POST["categories"];
     $image_price=$_POST["protect_price"];
     $sql2 ="INSERT INTO images (image_url,name,price,category) VALUES ('$image_url','$image_name','$image_price','$imgae_category')";
-    mysqli_query($conn,$sql2);
+    
+    if(!empty($image_name)&& !empty( $image_url)&&  !empty($imgae_category) &&!empty($image_price)){
+      mysqli_query($conn,$sql2);
+    }
   
 }
   if(isset($_POST["move_admins_details"]) ){
@@ -30,8 +33,12 @@
     $admin_email=$_POST["admin_email"];
     $admin_password=$_POST["admin_password"];
     $sql3 ="INSERT INTO admin_details (name,email,password) VALUES ('$admin_name','$admin_email','$admin_password')";
-    mysqli_query($conn,$sql3);
-    header("location:super_admin.php");
+    if(!empty($admin_name)&& !empty($admin_email)&&  !empty( $admin_password)){
+        mysqli_query($conn,$sql3);
+        header("location:super_admin.php");
+    }
+  
+    
 }
 
    
