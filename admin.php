@@ -24,7 +24,9 @@
 
     if(!empty($image_name)&& !empty( $image_url)&&  !empty($imgae_category) &&!empty($image_price)){
     mysqli_query($conn,$sql2);
-  }
+  }else{
+    echo '<script>alert("You shoud fill all the blanks of the prodect detail!");</script>';
+ }
 }
   ?>
 
@@ -188,7 +190,7 @@
             width: 90%; /* Ensure images don't exceed column width */
             height: auto;
             height: 90%;
-            margin-left: 5%;
+            margin-left: 0%;
              border-radius: 20px;
         }
 

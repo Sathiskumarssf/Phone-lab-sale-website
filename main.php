@@ -23,6 +23,8 @@
       }else{
          header("location:show.html");
       }
+     }else{
+        echo '<script>alert("You shoud fill all the blanks!");</script>';
      }
   }
 
@@ -64,7 +66,7 @@ if ($super_admin_result->num_rows > 0) {
         if ($super_admin_row["email"] === $checkemail && $super_admin_row["password"] === $checkpassword) {
              $_SESSION["name"] =$super_admin_row["name"];
              $_SESSION["email"]=$super_admin_row["email"];
-             $_SESSION["phone_nu"]=$super_admin_row["phone_number"];
+             $_SESSION["phone_nu"]=$super_admin_row["password"];
             header("location: super_admin.php");
         }
     }

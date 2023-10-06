@@ -24,7 +24,9 @@
     
     if(!empty($image_name)&& !empty( $image_url)&&  !empty($imgae_category) &&!empty($image_price)){
       mysqli_query($conn,$sql2);
-    }
+    }else{
+      echo '<script>alert("You shoud fill all the blanks of the prodect details!");</script>';
+   }
   
 }
   if(isset($_POST["move_admins_details"]) ){
@@ -34,9 +36,15 @@
     $admin_password=$_POST["admin_password"];
     $sql3 ="INSERT INTO admin_details (name,email,password) VALUES ('$admin_name','$admin_email','$admin_password')";
     if(!empty($admin_name)&& !empty($admin_email)&&  !empty( $admin_password)){
+       if(strlen($admin_password)>=8) {
         mysqli_query($conn,$sql3);
         header("location:super_admin.php");
-    }
+       }else{
+        echo '<script>alert("Did not add admin details becouse The leanth of the password should greater than 8.!");</script>';
+       }
+    }else{
+      echo '<script>alert("You shoud fill all the blanks of the admin details!");</script>';
+   }
   
     
 }
@@ -210,7 +218,7 @@
             width: 90%; /* Ensure images don't exceed column width */
             height: auto;
             height: 90%;
-            margin-left: 5%;
+            margin-left: 0%;
              border-radius: 20px;
         }
 
