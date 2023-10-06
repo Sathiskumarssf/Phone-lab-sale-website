@@ -162,7 +162,7 @@
             width: 90%; /* Ensure images don't exceed column width */
             height: auto;
             height: 90%;
-            margin-left: 5%;
+            margin-left: 0%;
              border-radius: 20px;
         }
 
